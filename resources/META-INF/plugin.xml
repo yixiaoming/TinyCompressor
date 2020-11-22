@@ -1,0 +1,34 @@
+<idea-plugin>
+    <id>com.your.company.unique.plugin.id</id>
+    <name>TinyCompresssor</name>
+    <version>1.0</version>
+    <vendor email="yixiaoming.me@qq.com" url="yixiaoming@github.com">CoolBook</vendor>
+
+    <description><![CDATA[
+      It is a tinypng plugin for you to compress you images in your project.<br>
+    ]]></description>
+
+    <change-notes><![CDATA[
+      version 1.0: Basic functions, support input key to compress images<br>
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <group id="TinyComressGroup" text="ImgCompressor" description="images compressor">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+            <action id="TinypngCompressor" class="org.yxm.tinycompressor.action.TinyCompressAction" text="tinypng"/>
+        </group>
+    </actions>
+
+</idea-plugin>
